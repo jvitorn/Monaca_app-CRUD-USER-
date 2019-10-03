@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <title>Listagem de usuario</title>
+
+    <script src="components/loader.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style media="screen">
+      body{
+        background-color: #152733;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="section-Register">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="row">
+                <!--Form-->
+                <div class="col-md-10 Register p-4 mt-5">
+                    <div class="shadow p-4">
+                      <div class="text-group text-white">
+                        <h6 class="text-center text-success">Crud Usuario</h6>
+                        <h5 class="text-center">Lista De Usuarios</h5>
+                        <small class="text-center">Verifique os usuarios em nosso site.</small>
+                      </div>
+                         <!--Listar-->
+                        <div class="form-group">
+                          <label for="labelusuario">Lista de Usuarios</label>
+                            <select class="form-control" id="ListaUsuario">
+                              <option>Lista de Usuarios</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                        </div>
+                        <!--Name-->
+                        <div class="form-group">
+                          <input type="name"  id="name" class="form-control" placeholder="Registre Seu Nome">
+                        </div> 
+                        <!--Email-->
+                        <div class="form-group">
+                          <input type="email" id="email" class="form-control"  placeholder="Registre Seu Email">
+                        </div>
+                        <!--Password-->
+                        <div class="form-group">
+                          <input type="password" id="password" class="form-control"  placeholder="Registre Sua Senha">
+                        </div>
+                       
+                        <!--Submit-->
+                        <div class="form-group">
+                          <input type="submit" class="btn btn-block btn-outline-success" value="Salvar Edição">
+                        </div>
+                        <!--Submit-->
+                        <div class="form-group">
+                          <input type="submit" class="btn btn-block btn-outline-warning" value="Editar">
+                        </div>
+                        <!--Submit-->
+                        <div class="form-group">
+                          <input type="submit" class="btn btn-block btn-outline-primary" value="Cancelar">
+                        </div>
+                         <!--Submit-->
+                        <div class="form-group">
+                          <input type="submit" class="btn btn-block btn-outline-danger" value="Excluir">
+                        </div>
+                      
+                        <div class="text-group">
+                          <small class="text-center"><a class="text-success text-center" href="index.html">Voltar para cadastro</a></small>
+                        </div> 
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+     </div>
+  </body>
+</html>
