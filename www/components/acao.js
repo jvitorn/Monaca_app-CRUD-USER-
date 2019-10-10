@@ -16,6 +16,7 @@ $(document).on("click","#enviar",function(){
       //Sucess
       success:function(data){
         navigator.notification.alert(data);
+        window.location.href = 'listar.html';
         //apagando valores
         $("#name").val("");
         $("#password").val("");
@@ -30,7 +31,22 @@ $(document).on("click","#enviar",function(){
 });
 $(document).ready(function(){
     listar();
+    
 });
+$(document).on('change','#lista',function(){
+      let nome = $("#lista option:selected").attr('nome');
+      let email = $("#lista option:selected").attr('email');
+      let senha = $("#lista option:selected").attr('senha');
+      console.log(nome,email,senha);
+        $("#name").val(nome);  
+        $("#email").val(email);
+        $("#password").val(senha); 
+     });
+     $('.editar').click(function(){
+       $("#name").attr('readyonly',false);
+       $("#email").attr('readyonly',false);
+       $("#password").attr('readyonly',false);
+     });
 function listar(){
   $.ajax({
       //como sera enviado
@@ -43,7 +59,7 @@ function listar(){
       success:function(data){
       let itemlista = "";
        $.each(data.pessoas,function(i,dados){
-          itemlista += "<option value='"+dados.codigo+"'>"+dados.nome+"</option>";
+          itemlista += "<option value='"+dados.codigo+"' nome='"+dados.nome+"' email='"+dados.email+"' senha='"+dados.senha+"'>"+dados.nome+"</option>";
        });
        $("#lista").html(itemlista);
        console.log(itemlista);
@@ -54,3 +70,4 @@ function listar(){
       }
   })
 }
+
